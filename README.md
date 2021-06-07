@@ -4,12 +4,12 @@ Generate wordclouds with tweets from user input of a Twitter account.
 ![output](https://user-images.githubusercontent.com/36235827/120943503-45806500-c6fd-11eb-998a-22e5b8bf849c.png)
 
 ## Setup
-1. In order to run the Twitter API, you must first acquire a set of keys/ tokens from the [Twitter Developer Platform](https://developer.twitter.com/en). You will need the `consumer_key`, `consumer_secret`, `access_token` and `access_secret`.
-2. Clone the repo:
+1. Clone the repo:
 ```
 git clone https://github.com/wzheng29/twitter-wordcloud.git
-$ cd twitter-wordcloud
+cd twitter-wordcloud
 ```
+2. In order to run the Twitter API, you must first acquire a set of keys/ tokens from the [Twitter Developer Platform](https://developer.twitter.com/en). You will need the `consumer_key`, `consumer_secret`, `access_token` and `access_secret`.
 3. Install dependencies:
 ```
 $ pip install -r requirements.txt
@@ -36,4 +36,4 @@ Concepts applied in this project include:
 - [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
 - [nltk.corpus Documentation](https://www.nltk.org/api/nltk.corpus.html)
 - Sklearn: [TF-IDF Vectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) and [K-Means](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) ([Reference](https://towardsdatascience.com/k-means-clustering-8e1e64c1561c))
-- WordClouds: [Documentation](https://amueller.github.io/word_cloud/generated/wordcloud.WordCloud.html) and [Reference](https://www.datacamp.com/community/tutorials/wordcloud-python)
+- WordCloud: [Documentation](https://amueller.github.io/word_cloud/generated/wordcloud.WordCloud.html) and [Reference](https://www.datacamp.com/community/tutorials/wordcloud-python)
