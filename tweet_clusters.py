@@ -56,11 +56,12 @@ def tokenizer(keyword):
 
 def cluster():
     keywords = processTweets()
-    tfidf = TfidfVectorizer(tokenizer=tokenizer, stop_words=stopwords.words('english', norm='l2')) #Term frequency - inverse document frequency
+    tfidf = TfidfVectorizer(tokenizer=tokenizer, stop_words=stopwords.words('english')) #Term frequency - inverse document frequency
     #X = pd.DataFrame(tfidf.fit_transform(keywords).toarray(), index=keywords, columns=tfidf.get_feature_names())
     #print(X) #Display each feature with tfidf of each keyword
     features = tfidf.fit_transform(keywords) #Learn vocab and idf
 
+    '''
     #Determine best value for k
     opt_cluster = range(1, 10)
     kmeans = [KMeans(n_clusters=i,max_iter=200) for i in opt_cluster]
@@ -71,6 +72,7 @@ def cluster():
     plt.ylabel('Score')
     plt.title('Elbow Method')
     plt.show()
+    '''
 
     #K-Means Clustering
     k = 5
@@ -91,16 +93,17 @@ def cluster():
         best_terms = [(terms[i], means[i]) for i in sorted_mean]
     
         all_terms.append([terms[i] for i in np.argsort(means)[::-1][:]])
-    
+    '''
         graph = pd.DataFrame(best_terms,columns=['features','score'])
         graph.plot.bar(x='features', y='score')
         plt.ylabel('Scores')
         plt.xlabel('Terms')
     plt.show()
+    '''
 
     #Print word clouds for each cluster. With larger fonts being the feature with the higher score
     x = 0
-    figure, ax = plt.subplots(5)
+    figure, ax = plt.subplots(1,5)
     for cluster in all_terms:
         word_cloud = WordCloud(width=400, height=400, background_color = 'white', min_font_size=10, prefer_horizontal = True).generate(' '.join(cluster))
         ax[x].imshow(word_cloud)
