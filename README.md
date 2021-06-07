@@ -6,8 +6,8 @@ Generate wordclouds with tweets from user input of a Twitter account.
 ## Setup
 1. Clone the repo:
 ```
-git clone https://github.com/wzheng29/twitter-wordcloud.git
-cd twitter-wordcloud
+$ git clone https://github.com/wzheng29/twitter-wordcloud.git
+$ cd twitter-wordcloud
 ```
 2. In order to run the Twitter API, you must first acquire a set of keys/ tokens from the [Twitter Developer Platform](https://developer.twitter.com/en). You will need the `consumer_key`, `consumer_secret`, `access_token` and `access_secret`.
 3. Install dependencies:
